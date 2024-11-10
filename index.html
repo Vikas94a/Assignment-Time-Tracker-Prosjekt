@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Barlow+Semi+Condensed:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Rubik:ital,wght@0,300..900;1,300..900&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="style.css" />
+    <script src="app.js" defer></script>
+    <title>Time Tracker</title>
+  </head>
+  <body>
+    <!-- main container for the profile and time tracking boxes  -->
+    <div class="container">
+      <!-- user profile section  -->
+      <div class="user">
+        <div class="user-pic">
+          <!-- user profile photo  -->
+          <img class="profile-img" src="images/image-jeremy.png" alt="" />
+          <!-- user job title and name -->
+          <div class="profile-info">
+            <p class="job-title">Report for</p>
+            <h3 class="name">Jeremy Robson</h3>
+          </div>
+        </div>
+        <!-- task duration or other infor related to user  -->
+        <div class="task-duration">
+          <p class="task-buttons" id="daily">Daily</p>
+          <p class="task-buttons" id="weekly">Weekly</p>
+          <p class="task-buttons" id="monthly">Monthly</p>
+        </div>
+      </div>
+
+      <div id="user-Profile">
+        <div id="work" class="box">
+          <div id="work-timing" class="timer"></div>
+        </div>
+        <div id="play" class="box">
+          <div id="play-timing" class="timer"></div>
+        </div>
+        <div id="study" class="box">
+          <div id="study-timing" class="timer"></div>
+        </div>
+
+        <div id="exercise" class="box">
+          <div id="excercise-timing" class="timer"></div>
+        </div>
+        <div id="social" class="box">
+          <div id="social-timing" class="timer"></div>
+        </div>
+        <div id="self-care" class="box">
+          <div id="self-timing" class="timer"></div>
+        </div>
+      </div>
+    </div>
+  </body>
+</html>
+
+<!-- <div class="profile"></div>
+          <div class="schedule-filter"></div> -->

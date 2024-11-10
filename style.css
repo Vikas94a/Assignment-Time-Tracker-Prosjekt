@@ -1,0 +1,312 @@
+:root {
+  --light-red: hsl(15, 100%, 70%);
+  --soft-blue: hsl(195, 74%, 62%);
+  --light-red-study: hsl(348, 100%, 68%);
+  --lime-green: hsl(145, 58%, 55%);
+  --violet: hsl(264, 64%, 52%);
+  --soft-orage: hsl(43, 84%, 65%);
+  --dark-blur: hsl(226, 43%, 10%);
+  --light-blue: hsl(235, 46%, 20%);
+  --desaturated-blue: hsl(235, 45%, 61%);
+  --pale-blue: hsl(236, 100%, 87%);
+  --blue: hsl(246, 80%, 60%);
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Rubik", sans-serif;
+}
+
+body {
+  background-color: var(--dark-blur);
+}
+/* main container which innhold all the div  */
+.container {
+  max-width: 100%;
+  min-height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 10px;
+  flex-wrap: wrap;
+}
+
+/* a container for user profile which contaien user-pic and task-duration  */
+.user {
+  display: flex;
+  flex-direction: column;
+  height: 72vh;
+  width: 15vw;
+  background-color: var(--light-blue);
+  border-radius: 20px;
+  margin-top: 15px;
+  flex-wrap: wrap;
+}
+
+/* user profile photo and name  */
+.user-pic {
+  background-color: var(--blue);
+  height: 48vh;
+  width: 15vw;
+  border-radius: 20px;
+  padding: 30px;
+}
+/* profile pic of Jeremy robson  */
+.profile-img {
+  height: 50px;
+  width: 50px;
+  border: 2px solid white;
+  border-radius: 50px;
+  margin-top: 20px;
+}
+
+/* profile-info */
+.profile-info {
+  padding-top: 20px;
+}
+
+/* job title  */
+.job-title {
+  color: rgb(154, 153, 153);
+  font-weight: 300;
+  font-size: 0.8rem;
+}
+
+.name {
+  color: whitesmoke;
+  font-weight: 300;
+}
+
+/* day, month and year buttons container  */
+.task-duration {
+  cursor: pointer;
+  height: 5vh;
+  width: 5vw;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+}
+
+/* routine duration  */
+.task-buttons {
+  background: none;
+  border: none;
+  padding: 20px 0 0 23px;
+  color: white;
+  opacity: 0.3;
+}
+
+/* user profile div which contain fiffrent time frame  */
+#user-Profile {
+  width: 60vw;
+  height: 70vh;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  grid-template-rows: repeat(2, 1fr);
+
+  gap: 11px;
+}
+
+/* all box with icons background */
+.box {
+  min-width: 18vw;
+  height: 20vh;
+  justify-self: center;
+  align-self: center;
+  position: relative;
+  border-radius: 14px;
+  margin-bottom: 100px;
+  cursor: pointer;
+}
+
+.box :hover {
+  opacity: 0.8;
+  border: 2px solid black;
+}
+
+/* section with timing details  */
+.timer {
+  margin-top: 50px;
+  height: 24vh;
+  background-color: var(--light-blue);
+  border-radius: 10px;
+  margin-bottom: 20px;
+  position: relative;
+}
+
+/* Work section background color and icon styling */
+#work {
+  background-color: var(--light-red);
+  background-image: url(images/icon-work.svg); /*background image of work*/
+  background-repeat: no-repeat;
+  background-position: right 2px top 5px;
+  background-size: 55px;
+}
+
+/* Play section background color and icon styling */
+#play {
+  background-color: var(--soft-blue);
+  background-image: url(images/icon-play.svg); /*background image of play*/
+  background-repeat: no-repeat;
+  background-position: right 2px top 5px;
+  background-size: 55px;
+}
+
+/* Study section background color and icon styling */
+#study {
+  background-color: var(--light-red-study);
+  background-image: url(images/icon-study.svg); /*background image of Study*/
+  background-repeat: no-repeat;
+  background-position: right 2px top 5px;
+  background-size: 55px;
+}
+
+/* Exercise section background color and icon styling */
+#exercise {
+  background-color: var(--lime-green);
+  background-image: url(images/icon-exercise.svg); /*background image of exercise*/
+  background-repeat: no-repeat;
+  background-position: right 2px top 10px;
+  background-size: 65px;
+}
+
+/* Social section background color and icon styling */
+#social {
+  background-color: var(--violet);
+  background-image: url(images/icon-social.svg); /*social image of work*/
+  background-repeat: no-repeat;
+  background-position: right 2px top 10px;
+  background-size: 55px;
+}
+
+/* self-care section background color and icon styling */
+#self-care {
+  background-color: var(--soft-orage);
+  background-image: url(images/icon-self-care.svg); /*background image of self-care*/
+  background-repeat: no-repeat;
+  background-position: right 2px top 5px;
+  background-size: 55px;
+}
+
+/* titel of box*/
+.title {
+  color: white;
+  display: flex;
+  justify-content: space-between;
+  padding: 15px;
+  font-size: 12px;
+  align-items: center;
+}
+
+.title p {
+  font-size: 18px;
+}
+
+/* current number represent current time  */
+.current-numer {
+  color: whitesmoke;
+  font-weight: 300;
+  font-size: 2rem;
+  padding-left: 15px;
+}
+
+/* Previous number represent previous time  */
+.previous-number {
+  color: var(--pale-blue);
+  opacity: 0.5;
+  padding-left: 15px;
+  font-size: 0.8rem;
+  padding-top: 5px;
+}
+
+/* Media Query */
+@media only screen and (max-width: 375px) {
+  .container {
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 20px;
+  }
+
+  /* Main container for user profile  */
+  .user {
+    min-width: 70vw;
+    max-height: 150px;
+    border-radius: 15px;
+    margin-top: 0px;
+  }
+
+  /* profile picture section with flex property  */
+  .user-pic {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-width: 70vw;
+    max-height: 98px;
+    border-radius: 15px;
+  }
+
+  /* margin adjustment for profile image  */
+  .profile-img {
+    margin: 30px 10px 20px -6px;
+  }
+  /* styling for the user name  */
+  .name {
+    font-size: 0.8rem;
+    margin-bottom: 20px;
+  }
+
+  /* styling for the user job title  */
+  .job-title {
+    font-size: 0.2;
+  }
+
+  /* container for task button */
+  .task-duration {
+    display: flex;
+    flex-direction: row;
+
+    max-width: 80vw;
+  }
+
+  /* task button with samller font-size  */
+  .task-buttons {
+    font-size: 0.8rem;
+    padding-right: 20px;
+  }
+
+  /* main profile for timing details in a column  */
+  #user-Profile {
+    display: flex;
+    flex-direction: column;
+    margin: 0px;
+    padding: 0px;
+  }
+
+  /* task box with heigh width padding and margin  */
+  .box {
+    min-width: 70vw;
+    max-height: 70px;
+    padding: 0px;
+    margin-bottom: 70px;
+  }
+
+  /* styling timing details  */
+  .timer {
+    min-width: 70vw;
+    max-height: 23vw;
+  }
+
+  /* title for each box with adjusted with font-size  */
+  .title {
+    padding: 4px 0px 0px 17px;
+    font-size: 0.5rem;
+  }
+  /* Current number section with smaller font size */
+
+  .current-numer {
+    font-size: 1.5rem;
+  }
+}
