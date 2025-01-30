@@ -72,7 +72,7 @@ function updateTime(period) {
     titleContainer.append(title, moreOption);
     // create an element to display the current time
     const currentNumber = document.createElement("h2");
-    currentNumber.className = "current-numer";
+    currentNumber.className = "current-number";
     currentNumber.innerText = `${activity[period].current}hrs`;
 
     // create an element for past timing section

@@ -17,6 +17,7 @@
   padding: 0;
   box-sizing: border-box;
   font-family: "Rubik", sans-serif;
+  
 }
 
 body {
@@ -30,41 +31,42 @@ body {
   justify-content: center;
   align-items: center;
   gap: 10px;
-  flex-wrap: wrap;
+  
 }
+
 
 /* a container for user profile which contaien user-pic and task-duration  */
 .user {
   display: flex;
   flex-direction: column;
-  height: 72vh;
-  width: 15vw;
+  height:500px;
+  width: 288px;
   background-color: var(--light-blue);
   border-radius: 20px;
-  margin-top: 15px;
+  /* margin-top: 15px; */
   flex-wrap: wrap;
 }
 
 /* user profile photo and name  */
 .user-pic {
   background-color: var(--blue);
-  height: 48vh;
-  width: 15vw;
+  height: 340px;
+  width:288px;
   border-radius: 20px;
   padding: 30px;
 }
 /* profile pic of Jeremy robson  */
 .profile-img {
-  height: 50px;
-  width: 50px;
-  border: 2px solid white;
+  height: 80px;
+  width: 80px;
+  border: 3px solid white;
   border-radius: 50px;
-  margin-top: 20px;
+  margin-top: 10px;
 }
 
 /* profile-info */
 .profile-info {
-  padding-top: 20px;
+  padding-top: 40px;
 }
 
 /* job title  */
@@ -76,17 +78,17 @@ body {
 
 .name {
   color: whitesmoke;
-  font-weight: 300;
+  font-weight: 400;
+  font-size: 2rem;
 }
 
 /* day, month and year buttons container  */
 .task-duration {
   cursor: pointer;
-  height: 5vh;
-  width: 5vw;
   display: flex;
   flex-direction: column;
   align-items: flex-start;
+  margin:10px ;
 }
 
 /* routine duration  */
@@ -100,40 +102,35 @@ body {
 
 /* user profile div which contain fiffrent time frame  */
 #user-Profile {
-  width: 60vw;
-  height: 70vh;
+  width: 952px;
+  height: 510px;
   display: grid;
   grid-template-columns: repeat(3, 1fr);
   grid-template-rows: repeat(2, 1fr);
-
   gap: 11px;
 }
 
 /* all box with icons background */
 .box {
-  min-width: 18vw;
-  height: 20vh;
+  min-width: 280px;
+  height: 245px;
   justify-self: center;
   align-self: center;
-  position: relative;
   border-radius: 14px;
-  margin-bottom: 100px;
   cursor: pointer;
+  
 }
 
-.box :hover {
-  opacity: 0.8;
-  border: 2px solid black;
-}
+
 
 /* section with timing details  */
 .timer {
-  margin-top: 50px;
-  height: 24vh;
+  margin-top: 52px;
+  height: 193px;
   background-color: var(--light-blue);
   border-radius: 10px;
   margin-bottom: 20px;
-  position: relative;
+  
 }
 
 /* Work section background color and icon styling */
@@ -142,7 +139,7 @@ body {
   background-image: url(images/icon-work.svg); /*background image of work*/
   background-repeat: no-repeat;
   background-position: right 2px top 5px;
-  background-size: 55px;
+  background-size: 75px;
 }
 
 /* Play section background color and icon styling */
@@ -151,7 +148,7 @@ body {
   background-image: url(images/icon-play.svg); /*background image of play*/
   background-repeat: no-repeat;
   background-position: right 2px top 5px;
-  background-size: 55px;
+  background-size: 75px;
 }
 
 /* Study section background color and icon styling */
@@ -160,7 +157,7 @@ body {
   background-image: url(images/icon-study.svg); /*background image of Study*/
   background-repeat: no-repeat;
   background-position: right 2px top 5px;
-  background-size: 55px;
+  background-size: 75px;
 }
 
 /* Exercise section background color and icon styling */
@@ -169,7 +166,7 @@ body {
   background-image: url(images/icon-exercise.svg); /*background image of exercise*/
   background-repeat: no-repeat;
   background-position: right 2px top 10px;
-  background-size: 65px;
+  background-size: 75px;
 }
 
 /* Social section background color and icon styling */
@@ -178,7 +175,7 @@ body {
   background-image: url(images/icon-social.svg); /*social image of work*/
   background-repeat: no-repeat;
   background-position: right 2px top 10px;
-  background-size: 55px;
+  background-size: 75px;
 }
 
 /* self-care section background color and icon styling */
@@ -187,7 +184,7 @@ body {
   background-image: url(images/icon-self-care.svg); /*background image of self-care*/
   background-repeat: no-repeat;
   background-position: right 2px top 5px;
-  background-size: 55px;
+  background-size: 75px;
 }
 
 /* titel of box*/
@@ -196,117 +193,123 @@ body {
   display: flex;
   justify-content: space-between;
   padding: 15px;
-  font-size: 12px;
+  font-size: 1.8rem;
   align-items: center;
 }
 
 .title p {
-  font-size: 18px;
+  font-size: 1.8rem;
 }
 
 /* current number represent current time  */
-.current-numer {
+.current-number {
   color: whitesmoke;
   font-weight: 300;
-  font-size: 2rem;
-  padding-left: 15px;
+  font-size: 2.5rem;
+  margin: 13px 0 0 18px;
 }
 
 /* Previous number represent previous time  */
 .previous-number {
   color: var(--pale-blue);
   opacity: 0.5;
-  padding-left: 15px;
-  font-size: 0.8rem;
+  margin: 13px 0 0 18px;
+  font-size: 1.2rem;
   padding-top: 5px;
 }
 
 /* Media Query */
-@media only screen and (max-width: 375px) {
+@media screen and (max-width: 345px) {
   .container {
+    display: flex;
+    width: 100%;
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    gap: 20px;
   }
 
-  /* Main container for user profile  */
-  .user {
-    min-width: 70vw;
-    max-height: 150px;
-    border-radius: 15px;
-    margin-top: 0px;
-  }
+.profile-img{
+  margin-right: 8px;
+  height: 60px;
+  width: 60px;
+}
 
-  /* profile picture section with flex property  */
-  .user-pic {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    min-width: 70vw;
-    max-height: 98px;
-    border-radius: 15px;
-  }
+.user{
+  margin-top: 80px;
+  height: 200px ;
+}
+.user-pic {
+  display: flex;
+  justify-content: center;
+  flex-direction: row;
+  height: 150px;
+ 
+}
 
-  /* margin adjustment for profile image  */
-  .profile-img {
-    margin: 30px 10px 20px -6px;
-  }
-  /* styling for the user name  */
-  .name {
-    font-size: 0.8rem;
-    margin-bottom: 20px;
-  }
+.profile-info {
+  display: flex;
+  flex-direction: column;
+  padding: 8px 2px;
+  
+  
+}
+.job-title{
+  font-size: 0.9rem;
+}
 
-  /* styling for the user job title  */
-  .job-title {
-    font-size: 0.2;
-  }
+.name {
+  font-size: 1.2rem;
+}
 
-  /* container for task button */
-  .task-duration {
-    display: flex;
-    flex-direction: row;
+.task-duration{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: row; 
+  gap: 42px;
+}
 
-    max-width: 80vw;
-  }
+.task-buttons{
+  padding: 10px 0 0 10px;
+  font-size: 0.9rem;
+}
 
-  /* task button with samller font-size  */
-  .task-buttons {
-    font-size: 0.8rem;
-    padding-right: 20px;
-  }
-
-  /* main profile for timing details in a column  */
   #user-Profile {
-    display: flex;
-    flex-direction: column;
-    margin: 0px;
-    padding: 0px;
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: repeat(6, 1fr);
+    gap: 30px;
+  width: 100%;
+    height: 100%;
   }
 
-  /* task box with heigh width padding and margin  */
   .box {
-    min-width: 70vw;
-    max-height: 70px;
-    padding: 0px;
-    margin-bottom: 70px;
+   height: 110px;
+   margin-bottom: 60px;
   }
 
-  /* styling timing details  */
   .timer {
-    min-width: 70vw;
-    max-height: 23vw;
+    height: 130px;
+    margin-bottom: 50px;
   }
 
-  /* title for each box with adjusted with font-size  */
   .title {
-    padding: 4px 0px 0px 17px;
-    font-size: 0.5rem;
+    padding-top: 14px;
+    font-size: 1.7rem;
   }
-  /* Current number section with smaller font size */
 
-  .current-numer {
-    font-size: 1.5rem;
+  .current-number {
+    font-size: 1.9rem;
+  margin: 0 0 0 15px;
+  padding: 0;
+  display: inline;
   }
+
+  .previous-number {
+    font-size: 1.3rem;
+    margin: 0 0 0 55px;
+    padding: 0;
+    display: inline;
+  }
+
 }
